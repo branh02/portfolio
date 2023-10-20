@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFED;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.quote-page,
+.homepage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.quote-page {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.quote {
+    text-align: center;
+}
+
+.quote-1 p.author {
+    color: #6b6666;
+    font-style: normal;
+    text-align: center;
+    font-size: 24px;
+}
+
+.homepage {
+    display: none;
+}
+
+.fade-up {
+    opacity: 0;
+}
+
+.logo{
+    font-family: 'Gruppo', sans-serif;
+    font-size: 24px;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    display: inline-block;
+    width: 35%;
+    color: #6b6666;
+}
+
+.menu{
+    font-family: 'Gruppo', sans-serif;
+    font-size: 24px;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    float: right;
+    color: #6b6666;
+    text-align: center;
+}
+
+.logo a {
+    color: #6b6666;
+    text-decoration: none; 
+}
+
+.logo a:hover {
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.logo a:active {
+    color: black;
+}
+
+
+.menu a {
+    color: #6b6666; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.menu a:active {
+    color: black;
+}
+
+.homepage h1.slogan {
+    padding-top: 6rem;
+    padding-left: 1rem;
+    font-size: 36px;
+}
+
+hr {
+    width: calc(33% - 1rem);
+    margin-left: 1rem;
+}
+
+.small-text-1 h1 {
+    padding-left: 1rem;
+    font-size: 22px;
+    color: #6b6666;
+}
+
+.small-text-2 h1 {
+    padding-right: 1rem;
+    float: right;
+    font-size: 26px
+}
+
+.about-me-title {
+    padding-top: 6rem;
+    padding-left: 1rem;
+}
+
+.about-me-text h1{
+    padding-left: 1rem;
+    font-size: 22px;
+    color: #6b6666;
+    width: 37%
+}
+
+.memeoji-class {
+    float: right;
+    padding-right: 1rem;
+}
+
+.memeoji-class img {
+    width: 250px;
+    height: auto;
+}
+
+.resume-bttn {
+    padding-left: 40%;
+    padding-top: 5rem;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    background-color: #00000000;
+    transition: background-color 0.3s;
+}
+
+.resume-bttn a {
+    text-decoration: none;
+    border: 2px solid #010100;
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    background-color: transparent;
+    transition: background-color 0.3s
+}
+
+.resume-bttn a:hover {
+    background-color: #e5f9fc;
+    color: #000;
+}
+
+.contact-container {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    border: 1px solid #747474;
+    margin: 10px 0; 
+    padding: 10px;
+    outline: none;
+    background: #94949490;
+}
+
+.contact-container input,
+.contact-container textarea {
+    border: none; 
+    border-bottom: 2px solid #333; 
+    background: transparent;
+    outline: none;
+    padding-top: 0.2rem;
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: #94949490;
+    /* padding-left: 1.05rem; */
+    font-size: 18px;
+}
+
+
+.contact-container button {
+    padding: 15px;
+    background: #94949490;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+}
+
+.contact-text h1 {
+    padding-top: 6rem;
+    padding-left: 1rem;
+    font-size: 28px;
+}
+
+.contact-me-text h1{
+    padding-left: 1rem;
+    font-size: 22px;
+    color: #6b6666;
+    width: 37%
+}
+
+#local-time {
+    position: fixed;
+    left: 1rem;
+    bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+
