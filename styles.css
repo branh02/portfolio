@@ -178,6 +178,11 @@ hr {
     color: #000;
 }
 
+.contact-container-main {
+    width: 50%;
+    
+}
+
 .contact-container {
     padding-left: 1rem;
     display: flex;
@@ -187,8 +192,8 @@ hr {
 .contact-container form {
     display: flex;
     flex-direction: column;
-    width: 40%;
     border-radius: 12px;
+    width: 90%
 }
 
 .form-group {
@@ -247,7 +252,7 @@ hr {
     padding-left: 1rem;
     font-size: 22px;
     color: #6b6666;
-    width: 37%
+    width: 80%
 }
 
 #local-time {
@@ -255,6 +260,14 @@ hr {
     left: 1rem;
     bottom: 1.5rem;
     padding-left: 1rem;
+}
+
+.sm-bttns img {
+    width: 3.5rem;
+    height: auto;
+    position: fixed;
+    right: 10rem;
+    bottom: 1.5rem;
 }
 
 
