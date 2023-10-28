@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
             quotePage.style.display = 'none';
             mainHomepage.style.display = 'block';
         }, 500); // Adjust the delay as needed
-    }, 900); // 5000 milliseconds (5 seconds)
+    }, 1100); // 5000 milliseconds (5 seconds)
 });
 
 
@@ -19,9 +19,25 @@ function updateLocalTime() {
     const formattedTime = currentTime.toLocaleTimeString('en-US', options);
     document.getElementById('local-time').textContent = 'Local Time: ' + formattedTime;
 }
-
-// Update the local time every second
 setInterval(updateLocalTime, 1000);
-
-// Call the function to initially display the time
 updateLocalTime();
+
+window.onload = function() {
+    var workText = document.querySelector('.work-text');
+    var tooltipImage = document.querySelector('#tooltip-image');
+    var workTextRect = workText.getBoundingClientRect();
+
+    tooltipImage.style.top = workTextRect.top + 'px';
+    tooltipImage.style.left = workTextRect.left + 'px';
+}
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+}
+
+navSlide();

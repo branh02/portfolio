@@ -20,25 +20,12 @@ body {
 }
 
 .quote-page {
-    background-color: #333;
-    color: #fff;
+    background-color: #eaeaea;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
-    font-style: italic;
-    font-size: 32px;
-}
-
-.quote {
-    text-align: center;
-}
-
-.quote-1 p.author {
-    color: #6b6666;
-    font-style: normal;
-    text-align: center;
-    font-size: 24px;
+    height: 100%; 
 }
 
 .homepage {
@@ -276,25 +263,22 @@ hr {
     display: flex;
     align-items: flex-start;
     padding-left: 1rem;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     justify-content: space-between;
 }
 
-.left-column {
-    flex: 1;
-}
-
 .right-column {
-    flex: 1;
     width: 49%;
     display: flex;
     flex-direction: column;
     gap: 10px; 
 }
 
-.left-column,
+.left-column {
+    width: 30%;
+}
 .right-column {
-    width: 49%;
+    width: 64%;
 }
 
 .date-header {
@@ -338,6 +322,12 @@ hr {
     display: block;
 }
 
+.job-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .experience-link {
     text-decoration: none;
     display: block; 
@@ -359,6 +349,128 @@ hr {
 
 .experience-content {
     display: flex;
+    flex-direction: row;
     gap: 0.5rem;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.skill-bubbles {
+    position: relative;
+    border: 2px solid #f7e2cd;
+    border-radius: 9999px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #b69677;
+    display: inline-block;
+    padding: 0.75vh 1.75vh;
+    width: auto;
+    margin-right: 1vh;
+    margin-top: 1vh;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chartjs-skill {
+    width: 250px;
+    height: auto;
+}
+
+#tooltip-image {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -81vw;
+    top: -65vh;
+    width: 33.5vw;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#chartjs-skill:hover {
+    background-color: #f7e2cd;
+}
+
+#chartjs-skill:hover #tooltip-image {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #6b6666;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        position: absolute;
+        height: 92vh;
+        top: 10%;
+        width: 80%;
+        background-color: rgba(0,0,0,0);
+        display: flex;
+        flex-direction: row;
+        /* width: 50%; */
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        right: 1rem;
+        
+    }
+
+    .nav.active {
+        opacity: 1;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 24px;
+    padding-top: 0;
+    padding-right: 1rem;
+    float: right;
+    color: #6b6666;
+    text-align: center;
+
+    }
+
+    .homepage h1.slogan {
+        font-size: 24px;
+        padding-top: 4rem;
+        padding-right: 1rem;
+    }
+
+    .small-text-1 h1 {
+        font-size: 18px;
+        color: #6b6666;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .small-text-2 h1 {
+        font-size: 20px;
+        padding-left: 1rem;
+        text-align: left;
+    }
 }
