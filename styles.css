@@ -420,6 +420,10 @@ hr {
     margin: 5px;
 }
 
+.quote-text, .quote-author {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .nav {
         position: absolute;
@@ -472,5 +476,25 @@ hr {
         font-size: 20px;
         padding-left: 1rem;
         text-align: left;
+    }
+
+    .quote-1 img {
+        display: none;
+    }
+
+    .quote-text, .quote-author {
+        display: block;
+        text-align: center;
+        color: #6b6666;
+    }
+
+    .quote-text {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    .quote-author {
+        font-size: 1em;
+        margin-top: 10px;
     }
 }
