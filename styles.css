@@ -429,15 +429,15 @@ hr {
         position: absolute;
         height: 92vh;
         top: 10%;
-        width: 80%;
+        /* width: 80%; */
         background-color: rgba(0,0,0,0);
-        display: flex;
-        flex-direction: row;
-        /* width: 50%; */
+        /* display: flex;
+        flex-direction: row; */
+        /* width: calc(100% - 40%); */
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
         right: 1rem;
-        
+        left: 1rem;
     }
 
     .nav.active {
@@ -450,8 +450,8 @@ hr {
 
     .menu {
     font-family: 'Gruppo', sans-serif;
-    font-size: 24px;
-    padding-top: 0;
+    font-size: 20px;
+    padding-top: 1rem;
     padding-right: 1rem;
     float: right;
     color: #6b6666;
@@ -496,5 +496,22 @@ hr {
     .quote-author {
         font-size: 1em;
         margin-top: 10px;
+    }
+
+    .about-me-text h1 {
+        padding-left: 1rem;
+        font-size: 18px;
+        color: #6b6666;
+        width: 100%;
+        padding-right: 1rem;
+    }
+
+    .resume-bttn {
+        width: 100%;
+        padding-top: 3.5rem;
+        margin: auto;
+        padding-left: 1rem; /* Add this line */
+        padding-right: 1rem; /* Add this line */
+        
     }
 }
