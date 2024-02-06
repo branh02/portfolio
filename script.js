@@ -41,3 +41,14 @@ const navSlide = () => {
 }
 
 navSlide();
+
+var currentPage = 1;
+var totalPages = 2;
+var images = [
+    "https://cdn.discordapp.com/attachments/1020395598131769516/1204166528006750218/image.png?ex=65d3be78&is=65c14978&hm=46e87ff2dcbd4571980a84c457b9bf1fdef03f5ff0a5a6b22b9891fece881417&",
+    "https://cdn.discordapp.com/attachments/1020395598131769516/1204166528488964168/image.png?ex=65d3be78&is=65c14978&hm=b5c9fe622603974b2ad94edce152525d4a14cf0c87c8d4cf4a65ba7bc6ecb4bb&"
+]
+function nextPage() {
+    currentPage = (currentPage % totalPages) + 1
+    document.getElementById('resumeImage').src = images[currentPage - 1]
+}
