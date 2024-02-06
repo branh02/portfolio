@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gruppo&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto Slab', sans-serif;
+        }
+    </style>
+    <title>Branavan Daniel Haran - Freelance Fullstack Developer!</title>
+</head>
+<body>
+    <h1 class="logo"><a href="index.html">BRANAVAN HARAN</h1>
+    <h1 class="menu"><a href="contact-me.html">CONTACT<br>ME</a></h1>
+    <h1 class="menu"><a href="about.html">ABOUT</a></h1>
+    <h1 class="menu"><a href="work.html">WORK</a></h1>
+    <div class="contact-container-main">
+        <h1 class="about-me-title">Drop Me A Message!</h1>
+        <hr>
+        <div class="contact-me-text">
+            <h1 class="text-1">You are more than welcome to reach out to me for discussions about potential job opportunities, collaborations, innovative ideas, or any coding-related inquiries. I am always enthusiastic about connecting with new individuals. I am eagerly anticipating your message!</h1>
+        </div>
+        <div class="contact-container">
+            <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                <div class="form-group">
+                    <label for="name">NAME:</label>
+                    <input type="text" id="name" placeholder="Branavan Haran *" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL:</label>
+                    <input type="text" id="email" placeholder="bran@bran-dev.com *" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">MESSAGE:</label>
+                    <textarea id="message" rows="4" placeholder="Hi Bran, can you quote me... *"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    
+    </div>    
+    <div class="footer-container">
+        <div id="local-time"></div>
+        <div class="sm-bttns">
+            <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/branavan-haran-3b0235280/">
+                    <img src="linkedin.png" alt="linkedin-logo">
+                </a>    
+            </div>
+            <div class="linkedin-link">
+                <a href="https://github.com/branh02">
+                    <img src="github.png" alt="github">
+                </a>    
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("x7gXC_aM391s5JBRI");
+
+        function sendEmail() {
+            emailjs.send("service_cvsw9ji", "template_ltqb658", {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                // phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value,
+            })
+            .then(function(response) {
+                console.log("Email sent successfully!");
+            }, function(error) {
+                alert('Unable to send form, developer has been notified.');
+            });
+        }
+
+        function reset() {
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+</body>
+</html>
